@@ -1,12 +1,23 @@
 import {Button} from "@/components/ui/button";
+import {Card, CardAction, CardContent, CardDescription, CardFooter, CardHeader, CardTitle} from "@/components/ui/card";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-                <div className={" align-middle rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"}>
-                    <Button>Add task</Button>
-                </div>
+      <div className={"flex flex-col items-center justify-center m-10 p-10"}>
+          <Card >
+              <CardHeader>
+                  <CardTitle>Crea tu notica</CardTitle>
+                  <CardDescription>Aquí puedes guardar todas tus ideas.</CardDescription>
+              </CardHeader>
+              <CardContent>
+                  <Button ><Link href="/create-note">crea una nota</Link></Button>
+              </CardContent>
+              <CardFooter>
+                  <p>Autor: derlys</p>
+              </CardFooter>
+          </Card>
+      </div>
 
-    </div>
   );
 }
