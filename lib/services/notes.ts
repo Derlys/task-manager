@@ -1,4 +1,4 @@
-import { prisma } from "@/lib/generated/prisma/prisma";
+import { prisma } from "@/lib/prisma";
 
 export async function createNote({
   title,
