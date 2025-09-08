@@ -1,0 +1,12 @@
+# Carpetas de dependencias y build
+node_modules
+.next
+out
+build
+dist
+
+# Archivos de control
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+

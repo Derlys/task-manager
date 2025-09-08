@@ -1,6 +1,7 @@
 # Task manager
 
 Creating app with nextjs and shadcn
+
 ## Table of content
 
 - Demo
@@ -30,5 +31,3 @@ Creating app with nextjs and shadcn
 
 - Node v18 or higher
 - PNPM
-
-
