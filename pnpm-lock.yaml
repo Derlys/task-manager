@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@/components':
+        specifier: link:@/components
+        version: link:@/components
       '@hookform/resolvers':
         specifier: ^5.2.1
         version: 5.2.1(react-hook-form@7.62.0(react@19.1.0))
@@ -41,9 +44,6 @@ importers:
       clsx:
         specifier: ^2.1.1
         version: 2.1.1
-      components:
-        specifier: link:@/components
-        version: link:@/components
       lucide-react:
         specifier: ^0.542.0
         version: 0.542.0(react@19.1.0)
