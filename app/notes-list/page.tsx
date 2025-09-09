@@ -1,17 +1,7 @@
-interface Note {
-  id: string;
-  title: string;
-  content?: string;
-  author?: {
-    name: string;
-    email: string;
-  };
-}
-
 import { getNotes } from "@/lib/services/notes";
 
 export default async function NotesListPage() {
-  const notes: Note[] = await getNotes();
+  const notes = await getNotes();
 
   return (
     <div className="m-10 p-10 max-w-2xl mx-auto">
@@ -21,7 +11,7 @@ export default async function NotesListPage() {
         <p className="text-gray-500">Todavía no hay notas guardadas.</p>
       ) : (
         <ul className="space-y-4">
-          {notes.map((note: Note) => (
+          {notes.map((note) => (
             <li key={note.id} className="p-4 rounded-xl bg-gray-100 shadow-sm">
               <h2 className="font-semibold">{note.title}</h2>
               {note.content && (
