@@ -1,7 +1,7 @@
-import { getNotes } from "@/lib/services/notes";
+import { getNotes, NoteWithAuthor } from "@/lib/services/notes";
 
 export default async function NotesListPage() {
-  const notes = await getNotes();
+  const notes: NoteWithAuthor[] = await getNotes();
 
   return (
     <div className="m-10 p-10 max-w-2xl mx-auto">

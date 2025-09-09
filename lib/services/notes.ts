@@ -24,3 +24,4 @@ export async function getNotes() {
     orderBy: { createdAt: "desc" },
   });
 }
+export type NoteWithAuthor = Awaited<ReturnType<typeof getNotes>>[0];
