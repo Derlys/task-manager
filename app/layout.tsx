@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import {SidebarProvider, SidebarTrigger} from "@/components/ui/sidebar";
-import {AppSidebar} from "@/components/app-sidebar";
+import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
+import { AppSidebar } from "@/components/app-sidebar";
 import Footer from "@/components/footer";
 
 const geistSans = Geist({
@@ -26,25 +26,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-      <html lang="en">
+    <html lang="en">
       <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}>
-      <SidebarProvider>
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-gray-50`}
+      >
+        <SidebarProvider>
           <div className="flex min-h-screen">
-              <AppSidebar />
-              <div className="flex flex-col flex-1">
-                  <header className="p-4 border-b bg-white flex items-center">
-                      <SidebarTrigger />
-                      <h1 className="ml-4 font-semibold text-lg">Task Manager</h1>
-                  </header>
-                  <main className="flex-1 w-full p-6 lg:p-8 overflow-y-auto">
-                          {children}
-                  </main>
-                  <Footer />
-              </div>
+            <AppSidebar />
+            <SidebarTrigger />
+            <div className="flex flex-col flex-1">
+              <main className="flex-1 w-full p-6 lg:p-8 overflow-y-auto">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </div>
-      </SidebarProvider>
+        </SidebarProvider>
       </body>
-      </html>
+    </html>
   );
 }
